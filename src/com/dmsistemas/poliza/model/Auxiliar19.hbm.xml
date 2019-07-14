@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/06/2019 01:22:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Auxiliar19" table="AUXILIAR19" schema="dbo" catalog="COI80Empre1" optimistic-lock="version">
+        <id name="tipoPoli" type="string">
+            <column name="TIPO_POLI" length="2" />
+            <generator class="assigned" />
+        </id>
+        <property name="numPoliz" type="string">
+            <column name="NUM_POLIZ" length="5" />
+        </property>
+        <property name="numPart" type="double">
+            <column name="NUM_PART" precision="53" scale="0" />
+        </property>
+        <property name="periodo" type="short">
+            <column name="PERIODO" />
+        </property>
+        <property name="ejercicio" type="short">
+            <column name="EJERCICIO" />
+        </property>
+        <property name="numCta" type="string">
+            <column name="NUM_CTA" length="21" />
+        </property>
+        <property name="fechaPol" type="timestamp">
+            <column name="FECHA_POL" length="23" />
+        </property>
+        <property name="concepPo" type="string">
+            <column name="CONCEP_PO" length="120" />
+        </property>
+        <property name="debeHaber" type="string">
+            <column name="DEBE_HABER" length="1" />
+        </property>
+        <property name="montomov" type="java.lang.Double">
+            <column name="MONTOMOV" precision="53" scale="0" />
+        </property>
+        <property name="numdepto" type="java.lang.Short">
+            <column name="NUMDEPTO" />
+        </property>
+        <property name="tipcambio" type="java.lang.Double">
+            <column name="TIPCAMBIO" precision="53" scale="0" />
+        </property>
+        <property name="contrapar" type="java.lang.Short">
+            <column name="CONTRAPAR" />
+        </property>
+        <property name="orden" type="java.lang.Integer">
+            <column name="ORDEN" />
+        </property>
+        <property name="ccostos" type="java.lang.Integer">
+            <column name="CCOSTOS" />
+        </property>
+        <property name="cgrupos" type="java.lang.Integer">
+            <column name="CGRUPOS" />
+        </property>
+        <property name="idinfadipar" type="java.lang.Integer">
+            <column name="IDINFADIPAR" />
+        </property>
+        <property name="iduuid" type="java.lang.Integer">
+            <column name="IDUUID" />
+        </property>
+    </class>
+</hibernate-mapping>

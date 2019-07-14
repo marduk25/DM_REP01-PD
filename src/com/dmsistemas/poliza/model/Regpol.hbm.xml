@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/05/2019 10:39:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Regpol" table="REGPOL" schema="dbo" 
+           catalog="COI80Empre1" optimistic-lock="version">
+        <id name="transaccio" type="int">
+            <column name="TRANSACCIO" />
+            <generator class="assigned" />
+        </id>
+        <property name="tipopol" type="string">
+            <column name="TIPOPOL" length="2" />
+        </property>
+        <property name="numpol" type="string">
+            <column name="NUMPOL" length="5" />
+        </property>
+        <property name="fechapol" type="timestamp">
+            <column name="FECHAPOL" length="23" />
+        </property>
+        <property name="fechaopr" type="timestamp">
+            <column name="FECHAOPR" length="23" />
+        </property>
+        <property name="sistema" type="string">
+            <column name="SISTEMA" length="15" />
+        </property>
+        <property name="numusr" type="java.lang.Integer">
+            <column name="NUMUSR" />
+        </property>
+        <property name="operacion" type="java.lang.Integer">
+            <column name="OPERACION" />
+        </property>
+        <property name="status" type="java.lang.Short">
+            <column name="STATUS" />
+        </property>
+        <property name="tippolintr" type="string">
+            <column name="TIPPOLINTR" length="1" />
+        </property>
+        <property name="polmodelo" type="string">
+            <column name="POLMODELO" />
+        </property>
+        <property name="regconcli" type="java.lang.Integer">
+            <column name="REGCONCLI" />
+        </property>
+        <property name="statuscli" type="string">
+            <column name="STATUSCLI" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

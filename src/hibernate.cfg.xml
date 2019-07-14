@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://localhost;databaseName=COI80Empre1</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password">dmsis2019*#</property>
+<!--        <property name="hibernate.connection.password">bacros19*</property>-->
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <mapping resource="com/dmsistemas/poliza/model/Impuestosfiscales.hbm.xml"/>
+        <mapping resource="com/dmsistemas/poliza/model/Uuidtimbres.hbm.xml"/>
+        <mapping resource="com/dmsistemas/poliza/model/Infadipar.hbm.xml"/>
+        <mapping resource="com/dmsistemas/poliza/model/Doctosfiscales.hbm.xml"/>
+        <mapping resource="com/dmsistemas/poliza/model/Otrosimpuestos.hbm.xml"/>
+        <mapping resource="com/dmsistemas/poliza/model/Opeter.hbm.xml"/>
+        <mapping resource="com/dmsistemas/poliza/model/Regpol.hbm.xml"/>
+        <mapping resource="com/dmsistemas/poliza/model/Folios.hbm.xml"/>
+        <mapping resource="com/dmsistemas/poliza/model/Control.hbm.xml"/>
+        <mapping resource="com/dmsistemas/poliza/model/Polizas19.hbm.xml"/>
+        <mapping resource="com/dmsistemas/poliza/model/Auxiliar19.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

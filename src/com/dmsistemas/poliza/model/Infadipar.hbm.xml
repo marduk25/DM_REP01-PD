@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/05/2019 10:39:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Infadipar" table="INFADIPAR" schema="dbo" 
+           catalog="COI80Empre1" optimistic-lock="version">
+        <id name="numreg" type="int">
+            <column name="NUMREG" />
+            <generator class="assigned" />
+        </id>
+        <property name="frmpago" type="string">
+            <column name="FRMPAGO" length="5" />
+        </property>
+        <property name="numcheque" type="string">
+            <column name="NUMCHEQUE" length="20" />
+        </property>
+        <property name="banco" type="int">
+            <column name="BANCO" not-null="true" />
+        </property>
+        <property name="ctaorig" type="string">
+            <column name="CTAORIG" length="50" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="FECHA" length="23" not-null="true" />
+        </property>
+        <property name="monto" type="java.lang.Double">
+            <column name="MONTO" precision="53" scale="0" />
+        </property>
+        <property name="benef" type="string">
+            <column name="BENEF" length="300" />
+        </property>
+        <property name="rfc" type="string">
+            <column name="RFC" length="30" />
+        </property>
+        <property name="bancodest" type="int">
+            <column name="BANCODEST" not-null="true" />
+        </property>
+        <property name="ctadest" type="string">
+            <column name="CTADEST" length="50" />
+        </property>
+        <property name="bancoorigext" type="string">
+            <column name="BANCOORIGEXT" length="225" />
+        </property>
+        <property name="bancodestext" type="string">
+            <column name="BANCODESTEXT" length="225" />
+        </property>
+        <property name="idfiscal" type="string">
+            <column name="IDFISCAL" length="40" />
+        </property>
+    </class>
+</hibernate-mapping>

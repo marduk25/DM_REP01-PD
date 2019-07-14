@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/05/2019 10:39:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Folios" table="FOLIOS" schema="dbo" 
+           catalog="COI80Empre1" optimistic-lock="version">
+        <id name="tippol" type="string">
+            <column name="TIPPOL" length="2" />
+            <generator class="assigned" />
+        </id>
+        <property name="ejercicio" type="short">
+            <column name="EJERCICIO" not-null="true" />
+        </property>
+        <property name="folio01" type="string">
+            <column name="FOLIO01" length="5" />
+        </property>
+        <property name="folio02" type="string">
+            <column name="FOLIO02" length="5" />
+        </property>
+        <property name="folio03" type="string">
+            <column name="FOLIO03" length="5" />
+        </property>
+        <property name="folio04" type="string">
+            <column name="FOLIO04" length="5" />
+        </property>
+        <property name="folio05" type="string">
+            <column name="FOLIO05" length="5" />
+        </property>
+        <property name="folio06" type="string">
+            <column name="FOLIO06" length="5" />
+        </property>
+        <property name="folio07" type="string">
+            <column name="FOLIO07" length="5" />
+        </property>
+        <property name="folio08" type="string">
+            <column name="FOLIO08" length="5" />
+        </property>
+        <property name="folio09" type="string">
+            <column name="FOLIO09" length="5" />
+        </property>
+        <property name="folio10" type="string">
+            <column name="FOLIO10" length="5" />
+        </property>
+        <property name="folio11" type="string">
+            <column name="FOLIO11" length="5" />
+        </property>
+        <property name="folio12" type="string">
+            <column name="FOLIO12" length="5" />
+        </property>
+        <property name="folio13" type="string">
+            <column name="FOLIO13" length="5" />
+        </property>
+        <property name="asig01" type="java.lang.Short">
+            <column name="ASIG01" />
+        </property>
+        <property name="asig02" type="java.lang.Short">
+            <column name="ASIG02" />
+        </property>
+        <property name="asig03" type="java.lang.Short">
+            <column name="ASIG03" />
+        </property>
+        <property name="asig04" type="java.lang.Short">
+            <column name="ASIG04" />
+        </property>
+        <property name="asig05" type="java.lang.Short">
+            <column name="ASIG05" />
+        </property>
+        <property name="asig06" type="java.lang.Short">
+            <column name="ASIG06" />
+        </property>
+        <property name="asig07" type="java.lang.Short">
+            <column name="ASIG07" />
+        </property>
+        <property name="asig08" type="java.lang.Short">
+            <column name="ASIG08" />
+        </property>
+        <property name="asig09" type="java.lang.Short">
+            <column name="ASIG09" />
+        </property>
+        <property name="asig10" type="java.lang.Short">
+            <column name="ASIG10" />
+        </property>
+        <property name="asig11" type="java.lang.Short">
+            <column name="ASIG11" />
+        </property>
+        <property name="asig12" type="java.lang.Short">
+            <column name="ASIG12" />
+        </property>
+        <property name="asig13" type="java.lang.Short">
+            <column name="ASIG13" />
+        </property>
+        <property name="asig14" type="java.lang.Short">
+            <column name="ASIG14" />
+        </property>
+        <property name="folio14" type="string">
+            <column name="FOLIO14" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

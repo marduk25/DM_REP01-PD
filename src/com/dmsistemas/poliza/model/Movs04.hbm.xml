@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/05/2019 12:58:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Movs04" table="MOVS04" schema="dbo" catalog="BAN40EMPRE01" optimistic-lock="version">
+        <id name="numReg" type="int">
+            <column name="NUM_REG" />
+            <generator class="assigned" />
+        </id>
+        <property name="cveConcep" type="string">
+            <column name="CVE_CONCEP" length="6" not-null="true" />
+        </property>
+        <property name="conPart" type="java.lang.Integer">
+            <column name="CON_PART" />
+        </property>
+        <property name="numCheque" type="java.lang.Integer">
+            <column name="NUM_CHEQUE" />
+        </property>
+        <property name="ref1" type="string">
+            <column name="REF1" length="20" />
+        </property>
+        <property name="ref2" type="string">
+            <column name="REF2" length="20" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="FECHA" length="23" not-null="true" />
+        </property>
+        <property name="FCobro" type="timestamp">
+            <column name="F_COBRO" length="23" not-null="true" />
+        </property>
+        <property name="bandPrn" type="string">
+            <column name="BAND_PRN" length="1" />
+        </property>
+        <property name="bandCont" type="string">
+            <column name="BAND_CONT" length="1" />
+        </property>
+        <property name="actSae" type="string">
+            <column name="ACT_SAE" length="1" />
+        </property>
+        <property name="numPol" type="string">
+            <column name="NUM_POL" length="5" />
+        </property>
+        <property name="tipPol" type="string">
+            <column name="TIP_POL" length="2" />
+        </property>
+        <property name="saeCoi" type="java.lang.Integer">
+            <column name="SAE_COI" />
+        </property>
+        <property name="montoTot" type="double">
+            <column name="MONTO_TOT" precision="53" scale="0" not-null="true" />
+        </property>
+        <property name="montoIvaTot" type="java.lang.Double">
+            <column name="MONTO_IVA_TOT" precision="53" scale="0" />
+        </property>
+        <property name="montoExt" type="java.lang.Double">
+            <column name="MONTO_EXT" precision="53" scale="0" />
+        </property>
+        <property name="moneda" type="java.lang.Integer">
+            <column name="MONEDA" />
+        </property>
+        <property name="TCambio" type="java.lang.Double">
+            <column name="T_CAMBIO" precision="53" scale="0" />
+        </property>
+        <property name="hora" type="java.lang.Integer">
+            <column name="HORA" />
+        </property>
+        <property name="clpv" type="string">
+            <column name="CLPV" length="10" />
+        </property>
+        <property name="ctaTransf" type="java.lang.Integer">
+            <column name="CTA_TRANSF" />
+        </property>
+        <property name="fechaLiq" type="timestamp">
+            <column name="FECHA_LIQ" length="23" />
+        </property>
+        <property name="fechaPol" type="timestamp">
+            <column name="FECHA_POL" length="23" />
+        </property>
+        <property name="cveInst" type="java.lang.Integer">
+            <column name="CVE_INST" />
+        </property>
+        <property name="mondifsae" type="string">
+            <column name="MONDIFSAE" length="1" />
+        </property>
+        <property name="tcambiosae" type="java.lang.Double">
+            <column name="TCAMBIOSAE" precision="53" scale="0" />
+        </property>
+        <property name="rfc" type="string">
+            <column name="RFC" length="20" />
+        </property>
+        <property name="concSae" type="java.lang.Integer">
+            <column name="CONC_SAE" />
+        </property>
+        <property name="solicit" type="string">
+            <column name="SOLICIT" length="50" />
+        </property>
+        <property name="transCoi" type="java.lang.Integer">
+            <column name="TRANS_COI" />
+        </property>
+        <property name="intsaenoi" type="java.lang.Integer">
+            <column name="INTSAENOI" />
+        </property>
+        <property name="XObser" type="string">
+            <column name="X_OBSER" />
+        </property>
+        <property name="factor" type="int">
+            <column name="FACTOR" not-null="true" />
+        </property>
+        <property name="formapago" type="int">
+            <column name="FORMAPAGO" not-null="true" />
+        </property>
+        <property name="anombrede" type="string">
+            <column name="ANOMBREDE" length="120" />
+        </property>
+        <property name="asociado" type="string">
+            <column name="ASOCIADO" length="1" not-null="true" />
+        </property>
+        <property name="ctaContabAsoc" type="string">
+            <column name="CTA_CONTAB_ASOC" length="40" />
+        </property>
+        <property name="revisado" type="java.lang.Integer">
+            <column name="REVISADO" />
+        </property>
+        <property name="prioridad" type="string">
+            <column name="PRIORIDAD" length="6" />
+        </property>
+        <property name="docAsoc" type="java.lang.Integer">
+            <column name="DOC_ASOC" />
+        </property>
+        <property name="resaltar" type="java.lang.Integer">
+            <column name="RESALTAR" />
+        </property>
+        <property name="anticipo" type="java.lang.Integer">
+            <column name="ANTICIPO" />
+        </property>
+        <property name="idtransf" type="java.lang.Integer">
+            <column name="IDTRANSF" />
+        </property>
+        <property name="sucursal" type="string">
+            <column name="SUCURSAL" length="30" />
+        </property>
+        <property name="cuenta" type="string">
+            <column name="CUENTA" length="30" />
+        </property>
+        <property name="clabe" type="string">
+            <column name="CLABE" length="30" />
+        </property>
+        <property name="multiClpv" type="java.lang.Integer">
+            <column name="MULTI_CLPV" />
+        </property>
+        <property name="cveBancoAsoc" type="string">
+            <column name="CVE_BANCO_ASOC" length="6" />
+        </property>
+        <property name="numConcAuto" type="java.lang.Integer">
+            <column name="NUM_CONC_AUTO" />
+        </property>
+        <property name="coiDepto" type="java.lang.Integer">
+            <column name="COI_DEPTO" />
+        </property>
+        <property name="coiCcostos" type="java.lang.Integer">
+            <column name="COI_CCOSTOS" />
+        </property>
+        <property name="coiProyecto" type="java.lang.Integer">
+            <column name="COI_PROYECTO" />
+        </property>
+        <set name="parmovs04s" table="PARMOVS04" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="NUM_MOV" not-null="true" />
+            </key>
+            <one-to-many class="com.dmsistemas.poliza.model.Parmovs04" />
+        </set>
+    </class>
+</hibernate-mapping>

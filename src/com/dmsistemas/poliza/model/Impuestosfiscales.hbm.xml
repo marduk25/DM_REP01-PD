@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/05/2019 10:39:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Impuestosfiscales" table="IMPUESTOSFISCALES" schema="dbo" 
+           catalog="COI80Empre1" optimistic-lock="version">
+        <id name="numimpuesto" type="int">
+            <column name="NUMIMPUESTO" />
+            <generator class="assigned" />
+        </id>
+        <property name="uuidtimbrecfdi" type="string">
+            <column name="UUIDTIMBRECFDI" length="36" not-null="true" />
+        </property>
+        <property name="impuesto" type="string">
+            <column name="IMPUESTO" length="3" />
+        </property>
+        <property name="tipoimpuesto" type="java.lang.Integer">
+            <column name="TIPOIMPUESTO" />
+        </property>
+        <property name="eslocal" type="java.lang.Integer">
+            <column name="ESLOCAL" />
+        </property>
+        <property name="base" type="java.lang.Double">
+            <column name="BASE" precision="53" scale="0" />
+        </property>
+        <property name="tipofactor" type="string">
+            <column name="TIPOFACTOR" length="6" />
+        </property>
+        <property name="tasacuota" type="java.lang.Double">
+            <column name="TASACUOTA" precision="53" scale="0" />
+        </property>
+        <property name="importe" type="java.lang.Double">
+            <column name="IMPORTE" precision="53" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

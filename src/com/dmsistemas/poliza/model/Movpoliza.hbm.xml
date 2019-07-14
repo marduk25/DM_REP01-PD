@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/05/2019 12:58:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Movpoliza" table="MOVPOLIZA" schema="dbo" catalog="BAN40EMPRE01" optimistic-lock="version">
+        <id name="numReg" type="int">
+            <column name="NUM_REG" />
+            <generator class="assigned" />
+        </id>
+        <property name="numCheque" type="java.lang.Integer">
+            <column name="NUM_CHEQUE" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="FECHA" length="23" not-null="true" />
+        </property>
+        <property name="fechaSistema" type="timestamp">
+            <column name="FECHA_SISTEMA" length="23" />
+        </property>
+        <property name="procesado" type="java.lang.Integer">
+            <column name="PROCESADO" />
+        </property>
+    </class>
+</hibernate-mapping>

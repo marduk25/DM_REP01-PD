@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/05/2019 10:39:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Opeter" table="OPETER" schema="dbo" 
+           catalog="COI80Empre1" optimistic-lock="version">
+        <id name="tipopol" type="string">
+            <column name="TIPOPOL" length="2" />
+            <generator class="assigned" />
+        </id>
+        <property name="numpol" type="string">
+            <column name="NUMPOL" length="5" not-null="true" />
+        </property>
+        <property name="fechapol" type="timestamp">
+            <column name="FECHAPOL" length="23" not-null="true" />
+        </property>
+        <property name="numpart" type="int">
+            <column name="NUMPART" not-null="true" />
+        </property>
+        <property name="numcta" type="string">
+            <column name="NUMCTA" length="21" />
+        </property>
+        <property name="rfcprove" type="string">
+            <column name="RFCPROVE" length="40" />
+        </property>
+        <property name="tipope" type="java.lang.Integer">
+            <column name="TIPOPE" />
+        </property>
+        <property name="monconiva" type="java.lang.Double">
+            <column name="MONCONIVA" precision="53" scale="0" />
+        </property>
+        <property name="mondedisr" type="java.lang.Double">
+            <column name="MONDEDISR" precision="53" scale="0" />
+        </property>
+        <property name="actos15" type="java.lang.Double">
+            <column name="ACTOS15" precision="53" scale="0" />
+        </property>
+        <property name="ivaop15" type="java.lang.Double">
+            <column name="IVAOP15" precision="53" scale="0" />
+        </property>
+        <property name="actos10" type="java.lang.Double">
+            <column name="ACTOS10" precision="53" scale="0" />
+        </property>
+        <property name="ivaop10" type="java.lang.Double">
+            <column name="IVAOP10" precision="53" scale="0" />
+        </property>
+        <property name="actoscero" type="java.lang.Double">
+            <column name="ACTOSCERO" precision="53" scale="0" />
+        </property>
+        <property name="actosexent" type="java.lang.Double">
+            <column name="ACTOSEXENT" precision="53" scale="0" />
+        </property>
+        <property name="ivaretenid" type="java.lang.Double">
+            <column name="IVARETENID" precision="53" scale="0" />
+        </property>
+        <property name="ivatraslad" type="java.lang.Double">
+            <column name="IVATRASLAD" precision="53" scale="0" />
+        </property>
+        <property name="ivadevolu" type="java.lang.Double">
+            <column name="IVADEVOLU" precision="53" scale="0" />
+        </property>
+        <property name="percausac" type="timestamp">
+            <column name="PERCAUSAC" length="23" />
+        </property>
+        <property name="ivanoac15" type="java.lang.Double">
+            <column name="IVANOAC15" precision="53" scale="0" />
+        </property>
+        <property name="ivanoac10" type="java.lang.Double">
+            <column name="IVANOAC10" precision="53" scale="0" />
+        </property>
+        <property name="esimporta" type="string">
+            <column name="ESIMPORTA" length="1" />
+        </property>
+        <property name="otrasret" type="java.lang.Double">
+            <column name="OTRASRET" precision="53" scale="0" />
+        </property>
+        <property name="esdevol" type="java.lang.Integer">
+            <column name="ESDEVOL" />
+        </property>
+        <property name="isrretenid" type="java.lang.Double">
+            <column name="ISRRETENID" precision="53" scale="0" />
+        </property>
+        <property name="ivageneral" type="java.lang.Integer">
+            <column name="IVAGENERAL" />
+        </property>
+        <property name="ivafronterizo" type="java.lang.Integer">
+            <column name="IVAFRONTERIZO" />
+        </property>
+        <property name="idconcepivaa" type="java.lang.Integer">
+            <column name="IDCONCEPIVAA" />
+        </property>
+        <property name="desdecfdi" type="java.lang.Short">
+            <column name="DESDECFDI" />
+        </property>
+        <property name="idopter" type="java.lang.Integer">
+            <column name="IDOPTER" />
+        </property>
+    </class>
+</hibernate-mapping>

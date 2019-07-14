@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/05/2019 10:39:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Otrosimpuestos" table="OTROSIMPUESTOS" schema="dbo" 
+           catalog="COI80Empre1" optimistic-lock="version">
+        <id name="idopter" type="int">
+            <column name="IDOPTER" />
+            <generator class="assigned" />
+        </id>
+        <property name="numreg" type="int">
+            <column name="NUMREG" not-null="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="120" not-null="true" />
+        </property>
+        <property name="tasa" type="java.lang.Double">
+            <column name="TASA" precision="53" scale="0" />
+        </property>
+        <property name="monto" type="java.lang.Double">
+            <column name="MONTO" precision="53" scale="0" />
+        </property>
+        <property name="tipo" type="short">
+            <column name="TIPO" not-null="true" />
+        </property>
+        <property name="base" type="java.lang.Double">
+            <column name="BASE" precision="53" scale="0" />
+        </property>
+        <property name="tipoimpuesto" type="short">
+            <column name="TIPOIMPUESTO" not-null="true" />
+        </property>
+        <property name="aplicadiot" type="java.lang.Short">
+            <column name="APLICADIOT" />
+        </property>
+        <property name="tipofactor" type="string">
+            <column name="TIPOFACTOR" length="5" not-null="true" />
+        </property>
+        <property name="aux" type="string">
+            <column name="AUX" length="5" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+    <schema-selection match-catalog="COI80Empre1"/>
+    <table-filter match-name="OTROSIMPUESTOS"/>
+    <table-filter match-name="UUIDTIMBRES"/>
+    <table-filter match-name="CONTROL"/>
+    <table-filter match-name="OPETER"/>
+    <table-filter match-name="INFADIPAR"/>
+    <table-filter match-name="REGPOL"/>
+    <table-filter match-name="DOCTOSFISCALES"/>
+    <table-filter match-name="IMPUESTOSFISCALES"/>
+    <table-filter match-name="FOLIOS"/>
+    <table-filter match-name="AUXILIAR19"/>
+    <table-filter match-name="POLIZAS19"/>
+</hibernate-reverse-engineering>

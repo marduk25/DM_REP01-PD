@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/06/2019 01:22:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Polizas19" table="POLIZAS19" schema="dbo" catalog="COI80Empre1" optimistic-lock="version">
+        <id name="tipoPoli" type="string">
+            <column name="TIPO_POLI" length="2" />
+            <generator class="assigned" />
+        </id>
+        <property name="numPoliz" type="string">
+            <column name="NUM_POLIZ" length="5" />
+        </property>
+        <property name="periodo" type="short">
+            <column name="PERIODO" />
+        </property>
+        <property name="ejercicio" type="int">
+            <column name="EJERCICIO" />
+        </property>
+        <property name="fechaPol" type="timestamp">
+            <column name="FECHA_POL" length="23" />
+        </property>
+        <property name="concepPo" type="string">
+            <column name="CONCEP_PO" length="120" />
+        </property>
+        <property name="numPart" type="java.lang.Integer">
+            <column name="NUM_PART" />
+        </property>
+        <property name="logaudita" type="string">
+            <column name="LOGAUDITA" length="1" />
+        </property>
+        <property name="contabiliz" type="string">
+            <column name="CONTABILIZ" length="1" />
+        </property>
+        <property name="numparcua" type="java.lang.Short">
+            <column name="NUMPARCUA" />
+        </property>
+        <property name="tienedocumentos" type="java.lang.Short">
+            <column name="TIENEDOCUMENTOS" />
+        </property>
+        <property name="proccontab" type="java.lang.Integer">
+            <column name="PROCCONTAB" />
+        </property>
+        <property name="origen" type="string">
+            <column name="ORIGEN" length="15" />
+        </property>
+        <property name="uuid" type="string">
+            <column name="UUID" length="100" />
+        </property>
+        <property name="espolizaprivada" type="java.lang.Integer">
+            <column name="ESPOLIZAPRIVADA" />
+        </property>
+        <property name="uuidop" type="string">
+            <column name="UUIDOP" length="40" />
+        </property>
+    </class>
+</hibernate-mapping>

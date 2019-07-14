@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/05/2019 12:58:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Parmovs04" table="PARMOVS04" schema="dbo" catalog="BAN40EMPRE01" optimistic-lock="version">
+        <id name="numRegp" type="int">
+            <column name="NUM_REGP" />
+            <generator class="assigned" />
+        </id>
+        <property name="numMov" type="java.lang.Integer">
+            <column name="NUM_MOV" />
+        </property>
+        <property name="cveConcep" type="string">
+            <column name="CVE_CONCEP" length="6" />
+        </property>
+        <property name="referencia" type="string">
+            <column name="REFERENCIA" length="20" />
+        </property>
+        <property name="montoIva" type="java.lang.Double">
+            <column name="MONTO_IVA" precision="53" scale="0" />
+        </property>
+        <property name="fact" type="string">
+            <column name="FACT" length="20" />
+        </property>
+        <property name="montoDoc" type="double">
+            <column name="MONTO_DOC" precision="53" scale="0" not-null="true" />
+        </property>
+        <property name="montoExt" type="java.lang.Double">
+            <column name="MONTO_EXT" precision="53" scale="0" />
+        </property>
+        <property name="orden" type="int">
+            <column name="ORDEN" not-null="true" />
+        </property>
+        <property name="XObser" type="string">
+            <column name="X_OBSER" />
+        </property>
+        <property name="numcargo" type="java.lang.Integer">
+            <column name="NUMCARGO" />
+        </property>
+        <property name="numcptopadre" type="java.lang.Integer">
+            <column name="NUMCPTOPADRE" />
+        </property>
+        <property name="tipocambiosae" type="java.lang.Double">
+            <column name="TIPOCAMBIOSAE" precision="53" scale="0" />
+        </property>
+        <property name="tipocambiobanco" type="java.lang.Double">
+            <column name="TIPOCAMBIOBANCO" precision="53" scale="0" />
+        </property>
+        <property name="docto" type="string">
+            <column name="DOCTO" length="20" />
+        </property>
+        <property name="noPartidasae" type="java.lang.Integer">
+            <column name="NO_PARTIDASAE" />
+        </property>
+        <property name="monedadoc" type="java.lang.Integer">
+            <column name="MONEDADOC" />
+        </property>
+        <property name="partClpv" type="string">
+            <column name="PART_CLPV" length="10" />
+        </property>
+        <property name="partClpvRfc" type="string">
+            <column name="PART_CLPV_RFC" length="13" />
+        </property>
+        <property name="partAnombrede" type="string">
+            <column name="PART_ANOMBREDE" length="120" />
+        </property>
+        <property name="ivaMc" type="java.lang.Double">
+            <column name="IVA_MC" precision="53" scale="0" />
+        </property>
+        <property name="partCtaContabAsoc" type="string">
+            <column name="PART_CTA_CONTAB_ASOC" length="28" />
+        </property>
+        <property name="partConcepsae" type="java.lang.Integer">
+            <column name="PART_CONCEPSAE" />
+        </property>
+        <property name="partAnticipo" type="java.lang.Integer">
+            <column name="PART_ANTICIPO" />
+        </property>
+        <property name="partCtaBancoAsoc" type="string">
+            <column name="PART_CTA_BANCO_ASOC" length="50" />
+        </property>
+        <property name="partCveBancoAsoc" type="string">
+            <column name="PART_CVE_BANCO_ASOC" length="6" />
+        </property>
+    </class>
+</hibernate-mapping>

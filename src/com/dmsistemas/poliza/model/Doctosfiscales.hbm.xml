@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/05/2019 10:39:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Doctosfiscales" table="DOCTOSFISCALES" schema="dbo"
+           catalog="COI80Empre1" optimistic-lock="version">
+        <id name="uuidtimbrecfdi" type="string">
+            <column name="UUIDTIMBRECFDI" length="36" />
+            <generator class="assigned" />
+        </id>
+        <property name="rutaarchivo" type="string">
+            <column name="RUTAARCHIVO" length="512" />
+        </property>
+        <property name="total" type="double">
+            <column name="TOTAL" precision="53" scale="0" not-null="true" />
+        </property>
+        <property name="subtotal" type="double">
+            <column name="SUBTOTAL" precision="53" scale="0" not-null="true" />
+        </property>
+        <property name="rfcemisor" type="string">
+            <column name="RFCEMISOR" length="36" not-null="true" />
+        </property>
+        <property name="rfcreceptor" type="string">
+            <column name="RFCRECEPTOR" length="36" not-null="true" />
+        </property>
+        <property name="fechaemision" type="timestamp">
+            <column name="FECHAEMISION" length="23" not-null="true" />
+        </property>
+        <property name="serie" type="string">
+            <column name="SERIE" length="100" />
+        </property>
+        <property name="folio" type="string">
+            <column name="FOLIO" length="100" />
+        </property>
+        <property name="versioncfdi" type="string">
+            <column name="VERSIONCFDI" length="6" not-null="true" />
+        </property>
+        <property name="lugarexpedicion" type="string">
+            <column name="LUGAREXPEDICION" length="50" not-null="true" />
+        </property>
+        <property name="moneda" type="string">
+            <column name="MONEDA" length="3" not-null="true" />
+        </property>
+        <property name="numctapago" type="string">
+            <column name="NUMCTAPAGO" length="50" />
+        </property>
+        <property name="tipocambio" type="java.lang.Double">
+            <column name="TIPOCAMBIO" precision="53" scale="0" />
+        </property>
+        <property name="descuento" type="java.lang.Double">
+            <column name="DESCUENTO" precision="53" scale="0" />
+        </property>
+        <property name="formapago" type="string">
+            <column name="FORMAPAGO" length="50" />
+        </property>
+        <property name="metodopago" type="string">
+            <column name="METODOPAGO" length="3" />
+        </property>
+        <property name="totalimpuestostrasladados" type="java.lang.Double">
+            <column name="TOTALIMPUESTOSTRASLADADOS" precision="53" scale="0" />
+        </property>
+        <property name="totalimpuestosretenidos" type="java.lang.Double">
+            <column name="TOTALIMPUESTOSRETENIDOS" precision="53" scale="0" />
+        </property>
+        <property name="nombreemisor" type="string">
+            <column name="NOMBREEMISOR" length="50" />
+        </property>
+        <property name="nombrereceptor" type="string">
+            <column name="NOMBRERECEPTOR" length="50" />
+        </property>
+        <property name="regimenfiscal" type="string">
+            <column name="REGIMENFISCAL" length="30" not-null="true" />
+        </property>
+        <property name="usocfdi" type="string">
+            <column name="USOCFDI" length="6" />
+        </property>
+        <property name="sellocfdi" type="string">
+            <column name="SELLOCFDI" length="100" not-null="true" />
+        </property>
+        <property name="nocertificado" type="string">
+            <column name="NOCERTIFICADO" length="100" not-null="true" />
+        </property>
+        <property name="nocertificadotimbre" type="string">
+            <column name="NOCERTIFICADOTIMBRE" length="100" not-null="true" />
+        </property>
+        <property name="condicionesdepago" type="string">
+            <column name="CONDICIONESDEPAGO" length="50" />
+        </property>
+        <property name="sello" type="string">
+            <column name="SELLO" length="100" not-null="true" />
+        </property>
+        <property name="tipodecomprobante" type="string">
+            <column name="TIPODECOMPROBANTE" length="50" not-null="true" />
+        </property>
+        <property name="xml" type="string">
+            <column name="XML" />
+        </property>
+    </class>
+</hibernate-mapping>

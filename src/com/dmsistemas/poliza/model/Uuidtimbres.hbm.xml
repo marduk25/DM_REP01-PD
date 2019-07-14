@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/05/2019 10:39:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Uuidtimbres" table="UUIDTIMBRES" schema="dbo" 
+           catalog="COI80Empre1" optimistic-lock="version">
+        <id name="numreg" type="int">
+            <column name="NUMREG" />
+            <generator class="assigned" />
+        </id>
+        <property name="uuidtimbre" type="string">
+            <column name="UUIDTIMBRE" length="36" not-null="true" />
+        </property>
+        <property name="monto" type="java.lang.Double">
+            <column name="MONTO" precision="53" scale="0" />
+        </property>
+        <property name="serie" type="string">
+            <column name="SERIE" length="100" />
+        </property>
+        <property name="folio" type="string">
+            <column name="FOLIO" length="100" />
+        </property>
+        <property name="rfcemisor" type="string">
+            <column name="RFCEMISOR" length="30" />
+        </property>
+        <property name="rfcreceptor" type="string">
+            <column name="RFCRECEPTOR" length="30" />
+        </property>
+        <property name="orden" type="java.lang.Integer">
+            <column name="ORDEN" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="FECHA" length="23" />
+        </property>
+        <property name="tipocomprobante" type="java.lang.Short">
+            <column name="TIPOCOMPROBANTE" />
+        </property>
+        <property name="tipocambio" type="java.lang.Double">
+            <column name="TIPOCAMBIO" precision="53" scale="0" />
+        </property>
+        <property name="versioncfdi" type="string">
+            <column name="VERSIONCFDI" length="6" />
+        </property>
+        <property name="moneda" type="string">
+            <column name="MONEDA" length="3" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/05/2019 10:39:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Control" table="CONTROL" schema="dbo" 
+           catalog="COI80Empre1" optimistic-lock="version">
+        <id name="ctconceptos" type="int">
+            <column name="CTCONCEPTOS" />
+            <generator class="assigned" />
+        </id>
+        <property name="ctdeptos" type="java.lang.Integer">
+            <column name="CTDEPTOS" />
+        </property>
+        <property name="ctmonedas" type="java.lang.Integer">
+            <column name="CTMONEDAS" />
+        </property>
+        <property name="ctrangos" type="java.lang.Integer">
+            <column name="CTRANGOS" />
+        </property>
+        <property name="cttipactiv" type="java.lang.Integer">
+            <column name="CTTIPACTIV" />
+        </property>
+        <property name="ctregpol" type="java.lang.Integer">
+            <column name="CTREGPOL" />
+        </property>
+        <property name="verbasdat" type="java.lang.Integer">
+            <column name="VERBASDAT" />
+        </property>
+        <property name="ccostos" type="java.lang.Integer">
+            <column name="CCOSTOS" />
+        </property>
+        <property name="cgrupos" type="java.lang.Integer">
+            <column name="CGRUPOS" />
+        </property>
+        <property name="ctconcietu" type="java.lang.Integer">
+            <column name="CTCONCIETU" />
+        </property>
+        <property name="ctconcivat" type="java.lang.Integer">
+            <column name="CTCONCIVAT" />
+        </property>
+        <property name="ctconcivaa" type="java.lang.Integer">
+            <column name="CTCONCIVAA" />
+        </property>
+        <property name="ctinfadipar" type="java.lang.Integer">
+            <column name="CTINFADIPAR" />
+        </property>
+        <property name="ctuuidcomp" type="java.lang.Integer">
+            <column name="CTUUIDCOMP" />
+        </property>
+        <property name="ctidotrosimp" type="java.lang.Integer">
+            <column name="CTIDOTROSIMP" />
+        </property>
+        <property name="ctidotrosimping" type="java.lang.Integer">
+            <column name="CTIDOTROSIMPING" />
+        </property>
+    </class>
+</hibernate-mapping>
