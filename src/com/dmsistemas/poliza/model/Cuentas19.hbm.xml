@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/08/2019 07:24:08 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.dmsistemas.poliza.model.Cuentas19" table="CUENTAS19" schema="dbo" catalog="COI80Empre1" optimistic-lock="version">
+        <id name="numCta" type="string">
+            <column name="NUM_CTA" length="21" />
+            <generator class="assigned" />
+        </id>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="TIPO" length="1" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="40" />
+        </property>
+        <property name="deptsino" type="string">
+            <column name="DEPTSINO" length="1" />
+        </property>
+        <property name="bandmulti" type="java.lang.Short">
+            <column name="BANDMULTI" />
+        </property>
+        <property name="bandajt" type="string">
+            <column name="BANDAJT" length="1" />
+        </property>
+        <property name="ctaPapa" type="string">
+            <column name="CTA_PAPA" length="21" />
+        </property>
+        <property name="ctaRaiz" type="string">
+            <column name="CTA_RAIZ" length="21" />
+        </property>
+        <property name="nivel" type="java.lang.Short">
+            <column name="NIVEL" />
+        </property>
+        <property name="ctaComp" type="string">
+            <column name="CTA_COMP" length="21" />
+        </property>
+        <property name="naturaleza" type="java.lang.Short">
+            <column name="NATURALEZA" />
+        </property>
+        <property name="rfc" type="string">
+            <column name="RFC" length="30" />
+        </property>
+        <property name="codagrup" type="string">
+            <column name="CODAGRUP" length="10" />
+        </property>
+        <property name="capturacheque" type="java.lang.Short">
+            <column name="CAPTURACHEQUE" />
+        </property>
+        <property name="capturauuid" type="java.lang.Short">
+            <column name="CAPTURAUUID" />
+        </property>
+        <property name="banco" type="java.lang.Integer">
+            <column name="BANCO" />
+        </property>
+        <property name="ctabancaria" type="string">
+            <column name="CTABANCARIA" length="50" />
+        </property>
+        <property name="capcheqtipomov" type="string">
+            <column name="CAPCHEQTIPOMOV" length="1" />
+        </property>
+        <property name="noincluirxml" type="java.lang.Integer">
+            <column name="NOINCLUIRXML" />
+        </property>
+        <property name="idfiscal" type="string">
+            <column name="IDFISCAL" length="40" />
+        </property>
+        <property name="esflujodeefectivo" type="java.lang.Short">
+            <column name="ESFLUJODEEFECTIVO" />
+        </property>
+        <property name="bancoextranjero" type="string">
+            <column name="BANCOEXTRANJERO" length="225" />
+        </property>
+        <property name="rfcflujo" type="string">
+            <column name="RFCFLUJO" length="15" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -3,7 +3,7 @@
 <hibernate-configuration>
   <session-factory>
     <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
-    <property name="hibernate.connection.url">jdbc:sqlserver://localhost;databaseName=BAN40EMPRE01</property>
+    <property name="hibernate.connection.url">jdbc:sqlserver://DESKTOP-QVSN3KA\SQL17;databaseName=BAN40EMPRE01</property>
     <property name="hibernate.connection.username">sa</property>
     <property name="hibernate.connection.password">dmsis2019*#</property>
 <!--    <property name="hibernate.connection.password">bacros19*</property>-->

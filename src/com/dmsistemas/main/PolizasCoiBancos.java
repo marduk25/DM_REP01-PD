@@ -4,6 +4,8 @@ import com.dmsistemas.poliza.dao.AuxiliarDao;
 import com.dmsistemas.poliza.dao.AuxiliarDaoImp;
 import com.dmsistemas.poliza.dao.ControlDao;
 import com.dmsistemas.poliza.dao.ControlDaoImp;
+import com.dmsistemas.poliza.dao.CuentasDao;
+import com.dmsistemas.poliza.dao.CuentasDaoImp;
 import com.dmsistemas.poliza.dao.DoctofiscalesDao;
 import com.dmsistemas.poliza.dao.DoctosfiscalesDaoImp;
 import com.dmsistemas.poliza.dao.FacturaDao;
@@ -347,9 +349,9 @@ public class PolizasCoiBancos {
                     aux19.setTipoPoli("Et");
                     aux19.setNumPoliz(String.valueOf(valorMaxPol));
                     aux19.setNumPart(partidaNo);//REVISAR NUM_PARTIDA
-                    aux19.setPeriodo(Short.parseShort("5"));
-                    aux19.setEjercicio(Short.parseShort("2019"));
-                    aux19.setNumCta("510902800000000000002");
+                    aux19.setPeriodo(Short.parseShort("8"));//REVISAR EL PERIODO CONTABLE
+                    aux19.setEjercicio(Short.parseShort("2019")); //REVISAR EL AÑO DEL PERIODO
+                    aux19.setNumCta("510902800000000000002"); //REVISAR LA CUENTA
                     aux19.setFechaPol(new Date());
                     aux19.setConcepPo(listaFactura.get(k).getFactura().concat("-".concat(listaFactura.get(k).getReferencia())));
                     aux19.setDebeHaber("D");
@@ -395,7 +397,7 @@ public class PolizasCoiBancos {
                     OpeterDao opeterDao = new OpeterDaoImp();
                     OtrosimpuestosDao oDao = new OtrosimpuestosDaoImp();
                     valIdOpter = Integer.parseInt(oDao.maxValIdopter());
-                    opeterDao.insertarTblOpeter(new Opeter("Et", String.valueOf(valorMaxPol), new Date(), partidaNo, "210603600000000000002",
+                    opeterDao.insertarTblOpeter(new Opeter("Et", String.valueOf(valorMaxPol), new Date(), partidaNo, "210603600000000000002",//CUENTA DEL PROVEEDOR
                             listaFactura.get(i).getRfcE(), 85,
                             Double.parseDouble(listaFactura.get(i).getTotal().toString()),
                             Double.parseDouble(listaFactura.get(i).getImporte().toString()),
@@ -415,9 +417,9 @@ public class PolizasCoiBancos {
                     aux19.setTipoPoli("Et");
                     aux19.setNumPoliz(String.valueOf(valorMaxPol));
                     aux19.setNumPart(partidaNo);//REVISAR NUM_PARTIDA
-                    aux19.setPeriodo(Short.parseShort("5"));
-                    aux19.setEjercicio(Short.parseShort("2019"));
-                    aux19.setNumCta("510902800000000000002");
+                    aux19.setPeriodo(Short.parseShort("8")); //REVISAR EL PERIODO CONTABLE
+                    aux19.setEjercicio(Short.parseShort("2019")); //REVISAR EL AÑO DEL PERIODO
+                    aux19.setNumCta("111000700000000000002"); //REVISAR LA CUENTA DEL IVA
                     aux19.setFechaPol(new Date());
                     aux19.setConcepPo("&  " + listaFactura.get(i).getRfcE());
                     aux19.setDebeHaber("D");
@@ -440,9 +442,10 @@ public class PolizasCoiBancos {
             aux19.setTipoPoli("Et");
             aux19.setNumPoliz(String.valueOf(valorMaxPol));
             aux19.setNumPart(partidaNo);//REVISAR NUM_PARTIDA
-            aux19.setPeriodo(Short.parseShort("5"));
-            aux19.setEjercicio(Short.parseShort("2019"));
-            aux19.setNumCta("510902800000000000002");
+            aux19.setPeriodo(Short.parseShort("8")); //REVISAR EL PERIODO CONTABLE
+            aux19.setEjercicio(Short.parseShort("2019"));//REVISAR EL AÑO DEL PERIODO CONTABLE
+            CuentasDao cuentaDao = new CuentasDaoImp();
+            aux19.setNumCta(cuentaDao.listaCuenta(listaFactura.get(i).getRfcE()).toString().replace("[", "").replace("]", ""));//AQUI VA LA CUENTA DEL PROVEEDOR
             aux19.setFechaPol(new Date());
             aux19.setConcepPo(listaFactura.get(i).getNombreE());
             aux19.setDebeHaber("H");
@@ -488,5 +491,17 @@ public class PolizasCoiBancos {
         }
     }
 //**FINALIZA MÉTODO PARA REVISAR SI HAY NUEVAS POLIZAS DE CHEQUE EN LA TABLA MOVS04**//
+
+    public String buscarCuentaProveedor() {
+        String cuentaProveedor = null;
+
+        return cuentaProveedor;
+    }
+
+    public String buscarCuentaCatalogo() {
+        String cuentaCatalogo = null;
+
+        return cuentaCatalogo;
+    }
 
 }

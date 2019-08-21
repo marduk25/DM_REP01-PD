@@ -12,7 +12,7 @@
         <!--            <property name="hibernate.connection.url">jdbc:sqlserver://DESKTOP-4Q0VSGP\SQLEXPRESS;databaseName=PortalProvNac</property>
         <property name="hibernate.connection.username">sa</property>
         <property name="hibernate.connection.password">dmsistemas</property>-->
-        <property name="hibernate.connection.url">jdbc:sqlserver://localhost;databaseName=PortalProvNac</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://DESKTOP-QVSN3KA\SQL17;databaseName=PortalProvNac</property>
         <property name="hibernate.connection.username">sa</property>
         <property name="hibernate.connection.password">dmsis2019*#</property>
         <!--        <property name="hibernate.connection.password">bacros19*</property>-->

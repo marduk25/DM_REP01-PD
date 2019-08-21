@@ -13,4 +13,5 @@
     <table-filter match-name="FOLIOS"/>
     <table-filter match-name="AUXILIAR19"/>
     <table-filter match-name="POLIZAS19"/>
+     <table-filter match-name="CUENTAS19"/>
 </hibernate-reverse-engineering>
