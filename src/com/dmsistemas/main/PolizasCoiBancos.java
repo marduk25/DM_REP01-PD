@@ -490,18 +490,5 @@ public class PolizasCoiBancos {
 
         }
     }
-//**FINALIZA MÉTODO PARA REVISAR SI HAY NUEVAS POLIZAS DE CHEQUE EN LA TABLA MOVS04**//
-
-    public String buscarCuentaProveedor() {
-        String cuentaProveedor = null;
-
-        return cuentaProveedor;
-    }
-
-    public String buscarCuentaCatalogo() {
-        String cuentaCatalogo = null;
-
-        return cuentaCatalogo;
-    }
 
 }
