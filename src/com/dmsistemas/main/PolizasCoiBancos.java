@@ -351,7 +351,8 @@ public class PolizasCoiBancos {
                     aux19.setNumPart(partidaNo);//REVISAR NUM_PARTIDA
                     aux19.setPeriodo(Short.parseShort("8"));//REVISAR EL PERIODO CONTABLE
                     aux19.setEjercicio(Short.parseShort("2019")); //REVISAR EL AÑO DEL PERIODO
-                    aux19.setNumCta("510902800000000000002"); //REVISAR LA CUENTA
+                    CuentasDao cuentaDao = new CuentasDaoImp();
+                    aux19.setNumCta(cuentaDao.listaCuenta(listaFactura.get(k).getRfcE()).toString().replace("[", "").replace("]", "")); //REVISAR LA CUENTA
                     aux19.setFechaPol(new Date());
                     aux19.setConcepPo(listaFactura.get(k).getFactura().concat("-".concat(listaFactura.get(k).getReferencia())));
                     aux19.setDebeHaber("D");
