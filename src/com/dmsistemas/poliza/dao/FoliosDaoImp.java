@@ -46,11 +46,12 @@ public class FoliosDaoImp implements FoliosDao {
     }
 
     @Override
-    public void actualizarTblFolios(String folioPol) {
+    public void actualizarTblFolios(String folioPol, String folioMes, short Ejercicio) {
         Session session = HibernateUtil.getSessionfactory().openSession();
         Transaction t = session.beginTransaction();
-        Query q = session.createQuery("UPDATE Folios SET folio03=:folioPol WHERE tippol='Et' AND ejercicio=2019");
+        Query q = session.createQuery("UPDATE Folios SET " + folioMes + "=:folioPol WHERE tippol='Et' AND ejercicio=:Ejercicio");
         q.setParameter("folioPol", folioPol);
+        q.setParameter("Ejercicio", Ejercicio);
 
         try {
             q.executeUpdate();
