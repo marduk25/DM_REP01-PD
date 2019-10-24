@@ -10,7 +10,7 @@ public interface RegpolDao {
     public void insertarTblRegpol(Regpol tblRegpol);
 
     public void actualizarTblRegpol(Regpol tblRegpol);
-    
-      public String maxValNumReg();//SELECCIONAMOS EL VALOR MÁXIMO +1 DE LA TABLA REGPOL
+
+    public String maxValNumReg();//SELECCIONAMOS EL VALOR MÁXIMO +1 DE LA TABLA REGPOL
 
 }

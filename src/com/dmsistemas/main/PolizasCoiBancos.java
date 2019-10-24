@@ -43,7 +43,11 @@ import com.dmsistemas.poliza.model.Parmovs04;
 import com.dmsistemas.poliza.model.Regpol;
 import com.dmsistemas.poliza.model.Uuidtimbres;
 import static java.sql.Types.NULL;
+import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -81,6 +85,9 @@ public class PolizasCoiBancos {
     private Uuidtimbres uuidTimbres;
     private int valMaxNumReg = 0;
     private int valIdOpter = 0;
+    private int year;
+    private int month;
+    private String fo;
 
     public Control getControl() {
         return control;
@@ -290,6 +297,30 @@ public class PolizasCoiBancos {
         this.valIdOpter = valIdOpter;
     }
 
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public String getFo() {
+        return fo;
+    }
+
+    public void setFo(String fo) {
+        this.fo = fo;
+    }
+
     public PolizasCoiBancos() {
         control = new Control();
         listacontrol = new ArrayList<>();
@@ -320,18 +351,25 @@ public class PolizasCoiBancos {
         uuidTimbres = new Uuidtimbres();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         PolizasCoiBancos main = new PolizasCoiBancos();
         main.RevisarTablaMovPoliza();
         System.exit(0);
     }
 
 //**INICIA MÉTODO PARA REVISAR SI HAY NUEVAS POLIZAS DE CHEQUE EN LA TABLA MOVS04**//
-    public void RevisarTablaMovPoliza() {
+    public void RevisarTablaMovPoliza() throws ParseException {
         MovpolizaDao movDao = new MovpolizaDaoImp();
         listamovpoliza = movDao.listaTblMovpoliza();
         //**REVISAMOS LOS NUEVO DATOS INGRESADOS EN LA TABLA MOVPOLIZA BANCOS**//
         for (int i = 0; i < listamovpoliza.size(); i++) {
+            //**PARA OBTENER EL PERIODO CONTABLE, FECHA Y MES**//
+            Date date = new Date();
+            date.setTime(listamovpoliza.get(i).getFecha().getTime());
+            LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+            year = localDate.getYear();
+            month = localDate.getMonthValue();
+
             //**INICIA-REVISAR LAS PARTIDAS EN LA TABLA PARMOVS04 BANCOS**//
             Parmovs04Dao pMovs = new Parmovs04DaoImp();
             listaparmovs04 = pMovs.listaTblParmovs04(listamovpoliza.get(i).getNumReg());
@@ -349,8 +387,8 @@ public class PolizasCoiBancos {
                     aux19.setTipoPoli("Et");
                     aux19.setNumPoliz(String.valueOf(valorMaxPol));
                     aux19.setNumPart(partidaNo);//REVISAR NUM_PARTIDA
-                    aux19.setPeriodo(Short.parseShort("8"));//REVISAR EL PERIODO CONTABLE
-                    aux19.setEjercicio(Short.parseShort("2019")); //REVISAR EL AÑO DEL PERIODO
+                    aux19.setPeriodo((short) month);//REVISAR EL PERIODO CONTABLE
+                    aux19.setEjercicio((short) year); //REVISAR EL AÑO DEL PERIODO
                     CuentasDao cuentaDao = new CuentasDaoImp();
                     aux19.setNumCta(cuentaDao.listaCuenta(listaFactura.get(k).getRfcE()).toString().replace("[", "").replace("]", "")); //REVISAR LA CUENTA
                     aux19.setFechaPol(new Date());
@@ -418,8 +456,8 @@ public class PolizasCoiBancos {
                     aux19.setTipoPoli("Et");
                     aux19.setNumPoliz(String.valueOf(valorMaxPol));
                     aux19.setNumPart(partidaNo);//REVISAR NUM_PARTIDA
-                    aux19.setPeriodo(Short.parseShort("8")); //REVISAR EL PERIODO CONTABLE
-                    aux19.setEjercicio(Short.parseShort("2019")); //REVISAR EL AÑO DEL PERIODO
+                    aux19.setPeriodo((short) month); //REVISAR EL PERIODO CONTABLE
+                    aux19.setEjercicio((short) year); //REVISAR EL AÑO DEL PERIODO
                     aux19.setNumCta("111000700000000000002"); //REVISAR LA CUENTA DEL IVA
                     aux19.setFechaPol(new Date());
                     aux19.setConcepPo("&  " + listaFactura.get(i).getRfcE());
@@ -443,8 +481,8 @@ public class PolizasCoiBancos {
             aux19.setTipoPoli("Et");
             aux19.setNumPoliz(String.valueOf(valorMaxPol));
             aux19.setNumPart(partidaNo);//REVISAR NUM_PARTIDA
-            aux19.setPeriodo(Short.parseShort("8")); //REVISAR EL PERIODO CONTABLE
-            aux19.setEjercicio(Short.parseShort("2019"));//REVISAR EL AÑO DEL PERIODO CONTABLE
+            aux19.setPeriodo((short) month); //REVISAR EL PERIODO CONTABLE
+            aux19.setEjercicio((short) year);//REVISAR EL AÑO DEL PERIODO CONTABLE
             CuentasDao cuentaDao = new CuentasDaoImp();
             aux19.setNumCta(cuentaDao.listaCuenta(listaFactura.get(i).getRfcE()).toString().replace("[", "").replace("]", ""));//AQUI VA LA CUENTA DEL PROVEEDOR
             aux19.setFechaPol(new Date());
@@ -482,8 +520,40 @@ public class PolizasCoiBancos {
             controlDao.actualizarTblControl(valRegPol, valInfa, valMaxNumReg, valIdOpter);
 
             //ACTUALIZAMOS EN LA TABLA FOLIOS
+            switch (month) {
+                case 1:
+                    fo = "FOLIO0" + month;
+                    break;
+                case 2:
+                    fo = "FOLIO0" + month;
+                    break;
+                case 3:
+                    fo = "FOLIO0" + month;
+                    break;
+                case 4:
+                    fo = "FOLIO0" + month;
+                    break;
+                case 5:
+                    fo = "FOLIO0" + month;
+                    break;
+                case 6:
+                    fo = "FOLIO0" + month;
+                    break;
+                case 7:
+                    fo = "FOLIO0" + month;
+                    break;
+                case 8:
+                    fo = "FOLIO0" + month;
+                    break;
+                case 9:
+                    fo = "FOLIO0" + month;
+                    break;
+                default:
+                    fo = "FOLIO" + month;
+                    break;
+            }
             FoliosDao foliosDao = new FoliosDaoImp();
-            foliosDao.actualizarTblFolios(String.valueOf(valorMaxPol));
+            foliosDao.actualizarTblFolios(String.valueOf(valorMaxPol), fo, (short) year);
 
             valorTotal = 0.0;
             partidaNo = 0;

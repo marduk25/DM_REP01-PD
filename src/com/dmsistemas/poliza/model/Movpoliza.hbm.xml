@@ -14,9 +14,6 @@
         <property name="fecha" type="timestamp">
             <column name="FECHA" length="23" not-null="true" />
         </property>
-        <property name="fechaSistema" type="timestamp">
-            <column name="FECHA_SISTEMA" length="23" />
-        </property>
         <property name="procesado" type="java.lang.Integer">
             <column name="PROCESADO" />
         </property>

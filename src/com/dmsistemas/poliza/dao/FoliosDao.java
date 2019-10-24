@@ -9,5 +9,5 @@ public interface FoliosDao {
 
     public void insertarTblFolios(Folios tblFolios);
 
-    public void actualizarTblFolios(String folioPol);
+    public void actualizarTblFolios(String folioPol, String folioMes, short Ejercicio);
 }
